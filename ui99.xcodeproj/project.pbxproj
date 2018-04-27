@@ -15,6 +15,9 @@
 		D321F95A20931DDA009B24ED /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321F95920931DDA009B24ED /* Dimension.swift */; };
 		D321F95C20931F3F009B24ED /* ConstraintTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321F95B20931F3F009B24ED /* ConstraintTest.swift */; };
 		D321F95E2093230E009B24ED /* ConstraintUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321F95D2093230E009B24ED /* ConstraintUtil.swift */; };
+		D321F96020932C94009B24ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D321F95F20932C94009B24ED /* UIKit.framework */; };
+		D321F96120932C9C009B24ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D321F95F20932C94009B24ED /* UIKit.framework */; };
+		D321F96320932DA5009B24ED /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D321F96220932DA5009B24ED /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,8 @@
 		D321F95920931DDA009B24ED /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		D321F95B20931F3F009B24ED /* ConstraintTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintTest.swift; sourceTree = "<group>"; };
 		D321F95D2093230E009B24ED /* ConstraintUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintUtil.swift; sourceTree = "<group>"; };
+		D321F95F20932C94009B24ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D321F96220932DA5009B24ED /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D59B04E3B48B76B40085B8C5 /* Pods_ui99.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ui99.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACB0A5ED075BFEC7A538F5F /* Pods-ui99Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ui99Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ui99Tests/Pods-ui99Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F8E7045FC8717D61E18FEF69 /* Pods-ui99.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ui99.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ui99/Pods-ui99.debug.xcconfig"; sourceTree = "<group>"; };
@@ -50,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D321F96020932C94009B24ED /* UIKit.framework in Frameworks */,
 				7D33CA696DE205A22A229241 /* Pods_ui99.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D321F96120932C9C009B24ED /* UIKit.framework in Frameworks */,
 				D321F94620931C96009B24ED /* ui99.framework in Frameworks */,
 				93F1DF6B04D829B61315486C /* Pods_ui99Tests.framework in Frameworks */,
 			);
@@ -69,6 +76,7 @@
 		494F59FF96B2ADBE3E24C78D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D321F95F20932C94009B24ED /* UIKit.framework */,
 				D59B04E3B48B76B40085B8C5 /* Pods_ui99.framework */,
 				7913BCF100D535BA48877D4E /* Pods_ui99Tests.framework */,
 			);
@@ -89,6 +97,7 @@
 		D321F93220931C95009B24ED = {
 			isa = PBXGroup;
 			children = (
+				D321F96220932DA5009B24ED /* README.md */,
 				D321F93E20931C95009B24ED /* ui99 */,
 				D321F94920931C96009B24ED /* ui99Tests */,
 				D321F93D20931C95009B24ED /* Products */,
@@ -231,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D321F96320932DA5009B24ED /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +482,11 @@
 				INFOPLIST_FILE = ui99/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiften.ui99;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -498,7 +512,11 @@
 				INFOPLIST_FILE = ui99/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiften.ui99;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -517,7 +535,11 @@
 				DEVELOPMENT_TEAM = 5FF785XRZ6;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = ui99Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiften.ui99Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -536,7 +558,11 @@
 				DEVELOPMENT_TEAM = 5FF785XRZ6;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = ui99Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiften.ui99Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
