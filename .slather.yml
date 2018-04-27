@@ -1,0 +1,6 @@
+ci_service: travis_ci
+coverage_service: coveralls
+xcodeproj: ui99.xcodeproj
+scheme: ui99
+source_directory: ui99
+workspace: ui99.xcworkspace
