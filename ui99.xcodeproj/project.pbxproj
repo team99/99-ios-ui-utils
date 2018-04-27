@@ -14,6 +14,7 @@
 		D321F95820931D3F009B24ED /* UI99Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321F95720931D3F009B24ED /* UI99Entry.swift */; };
 		D321F95A20931DDA009B24ED /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321F95920931DDA009B24ED /* Dimension.swift */; };
 		D321F95C20931F3F009B24ED /* ConstraintTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321F95B20931F3F009B24ED /* ConstraintTest.swift */; };
+		D321F95E2093230E009B24ED /* ConstraintUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321F95D2093230E009B24ED /* ConstraintUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		D321F95720931D3F009B24ED /* UI99Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI99Entry.swift; sourceTree = "<group>"; };
 		D321F95920931DDA009B24ED /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		D321F95B20931F3F009B24ED /* ConstraintTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintTest.swift; sourceTree = "<group>"; };
+		D321F95D2093230E009B24ED /* ConstraintUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintUtil.swift; sourceTree = "<group>"; };
 		D59B04E3B48B76B40085B8C5 /* Pods_ui99.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ui99.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACB0A5ED075BFEC7A538F5F /* Pods-ui99Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ui99Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ui99Tests/Pods-ui99Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F8E7045FC8717D61E18FEF69 /* Pods-ui99.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ui99.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ui99/Pods-ui99.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				D321F95920931DDA009B24ED /* Dimension.swift */,
+				D321F95D2093230E009B24ED /* ConstraintUtil.swift */,
 			);
 			path = Constraints;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				D321F94120931C96009B24ED /* Sources */,
 				D321F94220931C96009B24ED /* Frameworks */,
 				D321F94320931C96009B24ED /* Resources */,
+				FC853CFA3E994C535D5CD537 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,6 +280,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FC853CFA3E994C535D5CD537 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ui99Tests/Pods-ui99Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftFP/SwiftFP.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftUtilities/SwiftUtilities.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftFP.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftUtilities.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ui99Tests/Pods-ui99Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -284,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D321F95A20931DDA009B24ED /* Dimension.swift in Sources */,
+				D321F95E2093230E009B24ED /* ConstraintUtil.swift in Sources */,
 				D321F95820931D3F009B24ED /* UI99Entry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,11 +472,7 @@
 				INFOPLIST_FILE = ui99/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiften.ui99;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -477,11 +498,7 @@
 				INFOPLIST_FILE = ui99/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiften.ui99;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -500,11 +517,7 @@
 				DEVELOPMENT_TEAM = 5FF785XRZ6;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = ui99Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiften.ui99Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -523,11 +536,7 @@
 				DEVELOPMENT_TEAM = 5FF785XRZ6;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = ui99Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.swiften.ui99Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

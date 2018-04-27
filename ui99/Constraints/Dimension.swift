@@ -20,10 +20,10 @@ public extension UI99.Constraint {
       self.rawValue = rawValue
     }
 
-    public static var left: Dimension { return Dimension(rawValue: 1) }
-    public static var top: Dimension { return Dimension(rawValue: 2) }
-    public static var right: Dimension { return Dimension(rawValue: 3) }
-    public static var bottom: Dimension { return Dimension(rawValue: 4) }
+    public static var left: Dimension { return Dimension(rawValue: 1 << 1) }
+    public static var top: Dimension { return Dimension(rawValue: 1 << 2) }
+    public static var right: Dimension { return Dimension(rawValue: 1 << 3) }
+    public static var bottom: Dimension { return Dimension(rawValue: 1 << 4) }
 
     public static var all: Dimension {
       return Dimension(rawValue:
