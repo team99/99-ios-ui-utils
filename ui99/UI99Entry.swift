@@ -11,4 +11,7 @@ public final class UI99 {
 
   /// Utilities for layout constraints.
   public final class Constraint {}
+
+  /// Utilities for views.
+  public final class View {}
 }
