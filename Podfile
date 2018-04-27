@@ -10,6 +10,7 @@ target 'ui99' do
   target 'ui99Tests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'SwiftUtilities/Main', git: 'https://github.com/protoman92/SwiftUtilities.git'
   end
 
 end
