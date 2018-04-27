@@ -22,6 +22,7 @@
 		D321F96A20932EB8009B24ED /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321F96920932EB8009B24ED /* CustomView.swift */; };
 		D321F96C20932F07009B24ED /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D321F96B20932F07009B24ED /* CustomView.xib */; };
 		D321F96E20932F45009B24ED /* ViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D321F96D20932F45009B24ED /* ViewTest.swift */; };
+		D321F970209332A8009B24ED /* ui99.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D321F96F209332A7009B24ED /* ui99.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D321F96920932EB8009B24ED /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		D321F96B20932F07009B24ED /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		D321F96D20932F45009B24ED /* ViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTest.swift; sourceTree = "<group>"; };
+		D321F96F209332A7009B24ED /* ui99.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ui99.podspec; sourceTree = "<group>"; };
 		D59B04E3B48B76B40085B8C5 /* Pods_ui99.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ui99.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACB0A5ED075BFEC7A538F5F /* Pods-ui99Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ui99Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ui99Tests/Pods-ui99Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F8E7045FC8717D61E18FEF69 /* Pods-ui99.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ui99.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ui99/Pods-ui99.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		D321F93220931C95009B24ED = {
 			isa = PBXGroup;
 			children = (
+				D321F96F209332A7009B24ED /* ui99.podspec */,
 				D321F96220932DA5009B24ED /* README.md */,
 				D321F93E20931C95009B24ED /* ui99 */,
 				D321F94920931C96009B24ED /* ui99Tests */,
@@ -276,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D321F970209332A8009B24ED /* ui99.podspec in Resources */,
 				D321F96320932DA5009B24ED /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

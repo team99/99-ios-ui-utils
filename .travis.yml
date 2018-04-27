@@ -10,5 +10,6 @@ before_install:
 
 script:
 - set -o pipefail && xcodebuild clean test -sdk iphonesimulator -workspace ui99.xcworkspace -scheme ui99 -destination 'platform=iOS Simulator,name=iPhone 7' | xcpretty
+- pod lib lint --quick
 
 after_success: slather
